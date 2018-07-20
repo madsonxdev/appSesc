@@ -69,8 +69,7 @@ export class FeedPage
 
   abrirDetalhes(filme){
     console.log(filme);
-    this.navCtrl.push('FilmeDetalhesPage',{id: filme.id});
-    
+    this.navCtrl.push('FilmeDetalhesPage',{filme:filme});    
   }
 
   doInfinite(infiniteScroll) {

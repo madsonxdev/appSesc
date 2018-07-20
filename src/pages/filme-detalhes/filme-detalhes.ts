@@ -28,15 +28,17 @@ export class FilmeDetalhesPage {
   }
 
   ionViewDidEnter() {
-  this.filmeid = this.navParams.get("id"); 
-  this.movieProvider.getPopularMoviesDetalhes(this.filmeid).subscribe(data=>
+  this.filme = this.navParams.get("filme"); 
+
+  /**this.movieProvider.getPopularMoviesDetalhes(this.filmeid).subscribe(data=>
     {
-      this.filme= data.results;
-      /** 
+       this.filme= data.results;
+      
       let retorno = (data as any);
-    this.filme=JSON.parse(retorno);*/
+    this.filme=JSON.parse(retorno);
     })
-  }
+  */
+ }
   
 
 }
