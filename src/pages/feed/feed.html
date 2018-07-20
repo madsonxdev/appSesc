@@ -7,33 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Feed</ion-title>
+    <ion-title>THE MOVIE DB</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
   
-  <ion-card *ngFor="let filme of lista_filmes">
+  <ion-card *ngFor="let filme of lista_filmes" style="margin-bottom: 3px !important;border: none !important">
 
     <ion-item>
       <ion-avatar item-start>
-        <img src="https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg">
+        <!-- <img src="https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg"> -->
       </ion-avatar>
-      <h2 class="feed_title">{{filme.original_title}}</h2>
-      <p class="feed_date">{{filme.release_date}}</p>
+      <h2 class="feed_title">{{filme.title}}</h2>
+      <!-- <p class="feed_date">{{filme.release_date}}</p> -->
     </ion-item>
   
     <img [src]="'https://image.tmdb.org/t/p/w500' + filme.backdrop_path">
   
-    <ion-card-content>
+    <!-- <ion-card-content>
       <p>{{filme.overview}}</p>
-    </ion-card-content>
-  
+    </ion-card-content> -->
+<!--   
     <ion-row>
       <ion-col>
         <button ion-button icon-start clear small>
@@ -52,8 +52,8 @@
          Censura: {{filme.genre_ids[0]}}
         </ion-note>
       </ion-col>
-    </ion-row>
-  <button ion-button block (click)="abrirDetalhes(filme)">Detalhes</button>
+    </ion-row> -->
+  <button ion-button block (click)="abrirDetalhes(filme)">Detalhes</button>  
   </ion-card>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
@@ -61,3 +61,4 @@
     </ion-infinite-scroll>
 
 </ion-content>
+

@@ -9,11 +9,11 @@ import { ConfigPageModule } from '../config/config.module';
 })
 export class TabsPage {
   
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  //tab1Root = HomePage;
+  //tab2Root = AboutPage;
+ // tab3Root = ContactPage;
   tab4Root = 'FeedPage';
-  tab5Root = 'ConfigPage';  
+  //tab5Root = 'ConfigPage';  
 
   constructor() {
 

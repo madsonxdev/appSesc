@@ -7,24 +7,30 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Filme</ion-title>
+    <ion-title>DETALHES</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
-<ion-content padding>
+<ion-content>
     <ion-card *ngIf="filme">
 
-        <ion-item>          
-          <h2 class="feed_title">{{filme.original_title}}</h2>
-          <p class="feed_date">{{filme.release_date}}</p>
-        </ion-item>
+        <!-- <ion-item>           -->
+          <!-- <h2 class="feed_title">{{filme.original_title}}</h2> -->
+          <!-- <p class="feed_date">{{filme.release_date}}</p> -->
+        <!-- </ion-item> -->
       
         <img [src]="'https://image.tmdb.org/t/p/w500' + filme.backdrop_path">
       
         <ion-card-content>
-          <p>{{filme.overview}}</p>
+          <p><b>Título Original</b>
+            <p>{{filme.original_title}}</p>
+          <p><b>Título No Brasil</b>
+            <p>{{filme.title}}</p>
+          <p><b>Data de lançamento</b>
+            <p>{{filme.release_date}}</p>
+          <p><b>Idioma</b>: {{filme.original_language}}</p>          
+          <p style="text-align: justify !important"><b>Sinopse: </b>{{filme.overview}}</p>
         </ion-card-content>  
        
       </ion-card>

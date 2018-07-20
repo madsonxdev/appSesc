@@ -19,7 +19,7 @@ import { _iterableDiffersFactory } from '../../../node_modules/@angular/core/src
 export class FilmeDetalhesPage {
 
   public filme;
-  public filmeid;
+  public filmeName;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
