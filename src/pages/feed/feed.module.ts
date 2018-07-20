@@ -3,7 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { FeedPage } from './feed';
 
 @NgModule({
-  declarations: [
+  declarations:[
     FeedPage,
   ],
   imports: [
